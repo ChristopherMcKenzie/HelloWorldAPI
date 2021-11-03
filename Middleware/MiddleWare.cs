@@ -20,6 +20,7 @@ namespace HelloWorldAPI.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
+            
             context.Request.Headers.TryGetValue("User-Agent", out var header);
 
             await _next(context);
